@@ -1,8 +1,9 @@
-import { SelectElement, TextFieldElement } from '@graphcommerce/ecommerce-ui'
+import { SelectElement, TextFieldElement, AutocompleteElement } from '@graphcommerce/ecommerce-ui'
 import { filterNonNullableKeys, RenderType, TypeRenderer } from '@graphcommerce/next-ui'
 import React from 'react'
 import { useFormAddProductsToCart } from '../AddProductsToCart'
 import { ProductCustomizableFragment } from './ProductCustomizable.gql'
+import { CustomizableFieldOption } from './CustomizableFieldOption'
 
 export type OptionTypeRenderer = TypeRenderer<
   NonNullable<NonNullable<ProductCustomizableFragment['options']>[number]> & {
@@ -74,7 +75,7 @@ const defaultRenderer = {
   CustomizableCheckboxOption: () => <div>checkbox not implemented</div>,
   CustomizableDateOption: () => <div>date not implemented</div>,
   CustomizableDropDownOption,
-  CustomizableFieldOption: () => <div>field not implemented</div>,
+  CustomizableFieldOption,
   CustomizableFileOption: () => <div>file not implemented</div>,
   CustomizableMultipleOption: () => <div>multi not implemented</div>,
   CustomizableRadioOption: () => <div>radios not implemented</div>,
