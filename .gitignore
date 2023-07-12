@@ -17,6 +17,7 @@ tsctrace
 .DS_Store
 .env*
 !.env.example
+graphcommerce.config.js
 !graphcommerce.config.js.example
 
 # debug
