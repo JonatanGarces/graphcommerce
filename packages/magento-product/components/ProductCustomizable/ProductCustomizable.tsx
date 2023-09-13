@@ -1,9 +1,9 @@
-import { SelectElement, TextFieldElement, AutocompleteElement } from '@graphcommerce/ecommerce-ui'
+import { AutocompleteElement } from '@graphcommerce/ecommerce-ui'
 import { filterNonNullableKeys, RenderType, TypeRenderer } from '@graphcommerce/next-ui'
-import React from 'react'
 import { AddToCartItemSelector, useFormAddProductsToCart } from '../AddProductsToCart'
 import { ProductCustomizableFragment } from './ProductCustomizable.gql'
-import { CustomizableFieldOption } from './CustomizableFieldOption'
+import { Autocomplete, TextField, AutocompleteProps } from '@mui/material'
+import React, { useState } from 'react'
 
 export type OptionTypeRenderer = TypeRenderer<
   NonNullable<NonNullable<ProductCustomizableFragment['options']>[number]> & {
@@ -11,13 +11,15 @@ export type OptionTypeRenderer = TypeRenderer<
     index: number
   }
 >
-
-const CustomizableAreaOption = React.memo<
-  React.ComponentProps<OptionTypeRenderer['CustomizableAreaOption']>
+export const CustomizableFieldOption = React.memo<
+  React.ComponentProps<OptionTypeRenderer['CustomizableFieldOption']>
 >((props) => {
-  const { uid, areaValue, required, optionIndex, index, title } = props
-  const maxLength = areaValue?.max_characters ?? undefined
+  const { uid, fieldValue, required, optionIndex, index, title, product_sku, phonecase } = props
+  const maxLength = fieldValue?.max_characters ?? undefined
   const { control, register } = useFormAddProductsToCart()
+  const marca = ['SAMSUNG', 'IPHONE']
+  const modelo = ['S5', 'Iphone 12']
+  const options = title === 'Marca' ? marca : modelo
 
   return (
     <>
@@ -26,55 +28,25 @@ const CustomizableAreaOption = React.memo<
         {...register(`cartItems.${index}.entered_options.${optionIndex}.uid`)}
         value={uid}
       />
-      <TextFieldElement
-        color='primary'
-        multiline
-        minRows={3}
-        control={control}
+      <AutocompleteElement
         name={`cartItems.${index}.entered_options.${optionIndex}.value`}
-        label={title}
-        required={Boolean(required)}
-        validation={{ maxLength }}
-        helperText={(maxLength ?? 0) > 0 && `A maximum of ${maxLength}`}
-      />
-    </>
-  )
-})
-
-const CustomizableDropDownOption = React.memo<
-  React.ComponentProps<OptionTypeRenderer['CustomizableDropDownOption']>
->((props) => {
-  const { uid, required, optionIndex, index, title, dropdownValue } = props
-  const { control, register } = useFormAddProductsToCart()
-
-  return (
-    <>
-      <input
-        type='hidden'
-        {...register(`cartItems.${index}.entered_options.${optionIndex}.uid`)}
-        value={uid}
-      />
-      <SelectElement
-        color='primary'
         control={control}
-        name={`cartItems.${index}.entered_options.${optionIndex}.value`}
-        label={title}
         required={Boolean(required)}
+        label={title}
+        multiple={false}
         defaultValue=''
-        options={filterNonNullableKeys(dropdownValue, ['title']).map((option) => ({
-          id: option.uid,
-          label: option.title,
-        }))}
+        options={options}
+        showCheckbox={Boolean(false)}
       />
     </>
   )
 })
 
 const defaultRenderer = {
-  CustomizableAreaOption,
+  CustomizableAreaOption: () => <div>checkbox not implemented</div>,
   CustomizableCheckboxOption: () => <div>checkbox not implemented</div>,
   CustomizableDateOption: () => <div>date not implemented</div>,
-  CustomizableDropDownOption,
+  CustomizableDropDownOption: () => <div>checkbox not implemented</div>,
   CustomizableFieldOption,
   CustomizableFileOption: () => <div>file not implemented</div>,
   CustomizableMultipleOption: () => <div>multi not implemented</div>,
@@ -99,19 +71,77 @@ type ProductCustomizableProps = AddToCartItemSelector & {
     : { renderer: OptionTypeRendererProp })
 
 export function ProductCustomizable(props: ProductCustomizableProps) {
-  const { product, renderer, index = 0 } = props
+  const [state, setState] = useState({
+    brand: '',
+    model: '',
+  })
 
+  const { product, renderer, index = 0 } = props
+  const { control, register } = useFormAddProductsToCart()
+  const options = product?.options ?? []
+  const indexBrand = 0
+  const indexModel = 1
+  const brandProps = {
+    onChange: (e, value) => {
+      setState({ ...state, brand: value, model: '' })
+    },
+    isOptionEqualToValue: (option, value) => option === value,
+  }
+  const modelProps = {
+    isOptionEqualToValue: (option, value) => option === value,
+  }
   return (
     <>
-      {filterNonNullableKeys(product.options, ['sort_order']).map((option) => (
-        <RenderType
-          key={option.uid}
-          renderer={{ ...defaultRenderer, ...renderer }}
-          {...option}
-          optionIndex={option.sort_order + 100}
-          index={index}
-        />
-      ))}
+      <input
+        type='hidden'
+        {...register(
+          `cartItems.${index}.entered_options.${(options[indexBrand]?.sort_order ?? 0) + 100}.uid`,
+        )}
+        value={options[indexBrand]?.uid ?? ''}
+      />
+
+      <AutocompleteElement
+        name={`cartItems.${index}.entered_options.${
+          (options[indexBrand]?.sort_order ?? 0) + 100
+        }.value`}
+        control={control}
+        required={Boolean(options[indexBrand]?.required)}
+        label={options[indexBrand]?.title ?? ''}
+        multiple={false}
+        options={[...new Set(product.phonecase?.map((a) => a?.brand))] || []}
+        showCheckbox={Boolean(false)}
+        autocompleteProps={brandProps}
+      />
+
+      <input
+        type='hidden'
+        {...register(
+          `cartItems.${index}.entered_options.${(options[indexModel]?.sort_order ?? 0) + 100}.uid`,
+        )}
+        value={options[indexModel]?.uid ?? ''}
+      />
+      <AutocompleteElement
+        name={`cartItems.${index}.entered_options.${
+          (options[indexModel]?.sort_order ?? 0) + 100
+        }.value`}
+        control={control}
+        required={Boolean(options[indexModel]?.required)}
+        label={options[indexModel]?.title ?? ''}
+        multiple={false}
+        defaultValue=''
+        value={state.model}
+        options={
+          [
+            ...new Set(
+              product.phonecase
+                ?.filter((phonecase) => phonecase?.brand === state.brand)
+                .map((a) => a?.model),
+            ),
+          ] || []
+        }
+        showCheckbox={Boolean(false)}
+        autocompleteProps={modelProps}
+      />
     </>
   )
 }

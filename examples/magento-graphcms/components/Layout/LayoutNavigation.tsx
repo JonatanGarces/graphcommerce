@@ -116,10 +116,10 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
                 {menu?.items?.[0]?.name}
                 <IconSvg src={iconChevronDown} />
               </DesktopNavItem> */}
-              
-              <DesktopNavItem href='/blog'>
+
+              {/* <DesktopNavItem href='/blog'>
                 <Trans id='Blog' />
-              </DesktopNavItem>
+              </DesktopNavItem> */}
             </DesktopNavBar>
 
             <DesktopNavActions>

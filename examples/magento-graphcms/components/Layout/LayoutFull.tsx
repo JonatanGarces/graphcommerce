@@ -52,9 +52,9 @@ export function LayoutFull(props: LayoutFullProps) {
                 </DesktopNavItem>
               )
             })}
-            <DesktopNavItem href='/blog'>
+            {/* <DesktopNavItem href='/blog'>
               <Trans id='Blog' />
-            </DesktopNavItem>
+            </DesktopNavItem> */}
           </DesktopNavBar>
           <DesktopNavActions>
             {!router.pathname.startsWith('/search') && (
@@ -118,9 +118,9 @@ export function LayoutFull(props: LayoutFullProps) {
               </MenuFabItem>
             )
           })}
-          <MenuFabItem href='/blog'>
+          {/* <MenuFabItem href='/blog'>
             <Trans id='Blog' />
-          </MenuFabItem>
+          </MenuFabItem> */}
         </MenuFab>
       }
     >

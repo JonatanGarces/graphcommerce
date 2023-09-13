@@ -177,6 +177,12 @@ export function CartItem(props: CartItemProps) {
         >
           {name}
         </Link>
+        {product?.customizable_options?.length > 0 && (
+          <div>
+            {product?.customizable_options?.filter((option) => option.label === 'model')[0]
+              ?.values[0].value || ''}
+          </div>
+        )}
 
         {filterNonNullableKeys(errors).map((error) => (
           <Box sx={{ color: 'error.main', typography: 'caption' }} key={error.message}>

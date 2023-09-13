@@ -1,4 +1,9 @@
 fragment ProductCustomizable on CustomizableProductInterface @injectable {
+  phonecase {
+    model
+    brand
+    id
+  }
   options {
     uid
     __typename
