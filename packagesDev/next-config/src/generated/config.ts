@@ -9,7 +9,7 @@ export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> =
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
-  ID: { input: string | number; output: string; }
+  ID: { input: string; output: string; }
   String: { input: string; output: string; }
   Boolean: { input: boolean; output: boolean; }
   Int: { input: number; output: number; }
@@ -189,6 +189,8 @@ export type GraphCommerceConfig = {
    * Project settings -> API Access -> High Performance Read-only Content API
    */
   hygraphEndpoint: Scalars['String']['input'];
+  /** Hygraph Project ID. **Only used for migrations.** */
+  hygraphProjectId?: InputMaybe<Scalars['String']['input']>;
   /**
    * Content API. **Only used for migrations.**
    *
@@ -215,6 +217,12 @@ export type GraphCommerceConfig = {
    *   - Delete existing components
    *   - Update remote sources
    *   - Delete remote sources
+   *   - Read existing environments
+   *   - Read public content views
+   *   - Create public content views
+   *   - Update public content views
+   *   - Delete public content views
+   *   - Can see schema view
    *
    * ```
    * GC_HYGRAPH_WRITE_ACCESS_ENDPOINT="https://...hygraph.com/v2/..."
@@ -248,11 +256,7 @@ export type GraphCommerceConfig = {
    * SIDEBAR: Will be rendered as a sidebar on desktop and horizontal chips on mobile
    */
   productFiltersLayout?: InputMaybe<ProductFiltersLayout>;
-  /**
-   * Product filters with better UI for mobile and desktop.
-   *
-   * @experimental This is an experimental feature and may change in the future.
-   */
+  /** Product filters with better UI for mobile and desktop. */
   productFiltersPro?: InputMaybe<Scalars['Boolean']['input']>;
   /**
    * By default we route products to /p/[url] but you can change this to /product/[url] if you wish.
@@ -352,6 +356,11 @@ export type MagentoConfigurableVariantValues = {
   /** Use the name, description, short description and meta data from the configured variant */
   content?: InputMaybe<Scalars['Boolean']['input']>;
   /**
+   * This option enables the automatic update of product gallery images on the product page when a variant is selected,
+   * provided that the gallery images for the selected variant differ from the currently displayed images.
+   */
+  gallery?: InputMaybe<Scalars['Boolean']['input']>;
+  /**
    * When a variant is selected the URL of the product will be changed in the address bar.
    *
    * This only happens when the actual variant is can be accessed by the URL.
@@ -393,6 +402,7 @@ export function GraphCommerceConfigSchema(): z.ZodObject<Properties<GraphCommerc
     googleRecaptchaKey: z.string().nullish(),
     googleTagmanagerId: z.string().nullish(),
     hygraphEndpoint: z.string().min(1),
+    hygraphProjectId: z.string().nullish(),
     hygraphWriteAccessEndpoint: z.string().nullish(),
     hygraphWriteAccessToken: z.string().nullish(),
     legacyProductRoute: z.boolean().nullish(),
@@ -437,6 +447,7 @@ export function GraphCommerceStorefrontConfigSchema(): z.ZodObject<Properties<Gr
 export function MagentoConfigurableVariantValuesSchema(): z.ZodObject<Properties<MagentoConfigurableVariantValues>> {
   return z.object({
     content: z.boolean().nullish(),
+    gallery: z.boolean().nullish(),
     url: z.boolean().nullish()
   })
 }
