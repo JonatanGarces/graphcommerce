@@ -1,5 +1,21 @@
 # Change Log
 
+## 7.1.0-canary.8
+
+## 7.0.2-canary.7
+
+## 7.0.2-canary.6
+
+### Patch Changes
+
+- [#2068](https://github.com/graphcommerce-org/graphcommerce/pull/2068) [`4c04ac40e`](https://github.com/graphcommerce-org/graphcommerce/commit/4c04ac40e993c872fc0a302fd4216e6c89e05028) - Removed old yarn version ([@paales](https://github.com/paales))
+
+## 7.0.2-canary.5
+
+### Patch Changes
+
+- [`3e4092db1`](https://github.com/graphcommerce-org/graphcommerce/commit/3e4092db1f74b693b14b43f49a11938b7bc8fb2f) - Try and fix gihtub releases ([@paales](https://github.com/paales))
+
 ## 7.0.1
 
 ### Patch Changes
