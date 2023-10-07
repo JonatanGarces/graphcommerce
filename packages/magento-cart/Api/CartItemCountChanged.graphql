@@ -18,5 +18,10 @@ fragment CartItemCountChanged on Cart @injectable {
         ...ProductImage
       }
     }
+    ... on SimpleCartItem {
+      customizable_options {
+        ...SelectedCustomizableOption
+      }
+    }
   }
 }
