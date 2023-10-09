@@ -130,6 +130,7 @@ module.exports = {
               'Select',
               'Slider',
               'Switch',
+              'TextField',
               'ToggleButtonGroup',
             ],
             message: `Please use \`import { SelectElement, TextFieldElement, etc } from '@graphcommerce/ecommerce-ui'\` for usage in forms. https://github.com/graphcommerce-org/graphcommerce/tree/main/packages/ecommerce-ui/components/FormComponents`,

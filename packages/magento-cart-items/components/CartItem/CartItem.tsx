@@ -178,14 +178,7 @@ export function CartItem(props: CartItemProps) {
         >
           {name}
         </Link>
-        {/* manganimeshon customization */}
-        {product?.customizable_options?.length > 0 && (
-          <div>
-            {product?.customizable_options?.filter((option) => option.label === 'model')[0]
-              ?.values[0].value || ''}
-          </div>
-        )}
-        {/* manganimeshon customization */}
+
         {filterNonNullableKeys(errors).map((error) => (
           <Box sx={{ color: 'error.main', typography: 'caption' }} key={error.message}>
             {error.message}

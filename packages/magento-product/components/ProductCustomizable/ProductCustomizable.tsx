@@ -1,6 +1,6 @@
-import { SelectElement, TextFieldElement } from '@graphcommerce/ecommerce-ui'
+import { SelectElement, TextFieldElement, AutocompleteElement } from '@graphcommerce/ecommerce-ui'
 import { filterNonNullableKeys, RenderType, TypeRenderer } from '@graphcommerce/next-ui'
-import React from 'react'
+import React, { useState } from 'react'
 import { AddToCartItemSelector, useFormAddProductsToCart } from '../AddProductsToCart'
 import { ProductCustomizableFragment } from './ProductCustomizable.gql'
 
@@ -98,19 +98,77 @@ type ProductCustomizableProps = AddToCartItemSelector & {
     : { renderer: OptionTypeRendererProp })
 
 export function ProductCustomizable(props: ProductCustomizableProps) {
-  const { product, renderer, index = 0 } = props
+  const [state, setState] = useState({
+    brand: '',
+    model: '',
+  })
 
+  const { product, renderer, index = 0 } = props
+  const { control, register } = useFormAddProductsToCart()
+  const options = product?.options ?? []
+  const indexBrand = 0
+  const indexModel = 1
+  const brandProps = {
+    onChange: (e, value) => {
+      setState({ ...state, brand: value, model: '' })
+    },
+    isOptionEqualToValue: (option, value) => option === value,
+  }
+  const modelProps = {
+    isOptionEqualToValue: (option, value) => option === value,
+  }
   return (
     <>
-      {filterNonNullableKeys(product.options, ['sort_order']).map((option) => (
-        <RenderType
-          key={option.uid}
-          renderer={{ ...defaultRenderer, ...renderer }}
-          {...option}
-          optionIndex={option.sort_order + 100}
-          index={index}
-        />
-      ))}
+      <input
+        type='hidden'
+        {...register(
+          `cartItems.${index}.entered_options.${(options[indexBrand]?.sort_order ?? 0) + 100}.uid`,
+        )}
+        value={options[indexBrand]?.uid ?? ''}
+      />
+
+      <AutocompleteElement
+        name={`cartItems.${index}.entered_options.${
+          (options[indexBrand]?.sort_order ?? 0) + 100
+        }.value`}
+        control={control}
+        required={Boolean(options[indexBrand]?.required)}
+        label={options[indexBrand]?.title ?? ''}
+        multiple={false}
+        options={[...new Set(product.phonecase?.map((a) => a?.brand))] || []}
+        showCheckbox={Boolean(false)}
+        autocompleteProps={brandProps}
+      />
+
+      <input
+        type='hidden'
+        {...register(
+          `cartItems.${index}.entered_options.${(options[indexModel]?.sort_order ?? 0) + 100}.uid`,
+        )}
+        value={options[indexModel]?.uid ?? ''}
+      />
+      <AutocompleteElement
+        name={`cartItems.${index}.entered_options.${
+          (options[indexModel]?.sort_order ?? 0) + 100
+        }.value`}
+        control={control}
+        required={Boolean(options[indexModel]?.required)}
+        label={options[indexModel]?.title ?? ''}
+        multiple={false}
+        defaultValue=''
+        // value={state.model}
+        options={
+          [
+            ...new Set(
+              product.phonecase
+                ?.filter((phonecase) => phonecase?.brand === state.brand)
+                .map((a) => a?.model),
+            ),
+          ] || []
+        }
+        showCheckbox={Boolean(false)}
+        autocompleteProps={modelProps}
+      />
     </>
   )
 }
