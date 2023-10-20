@@ -76,9 +76,24 @@
     "@graphcommerce/typescript-config-pwa": "7.0.1"
   },
   "changesets": [
+    "brown-planes-retire",
+    "curvy-grapes-accept",
+    "forty-rocks-bow",
+    "fuzzy-clocks-hug",
+    "itchy-snakes-film",
     "little-shirts-film",
+    "quiet-tomatoes-melt",
     "red-gifts-listen",
+    "rich-beans-grin",
     "rich-guests-applaud",
+    "serious-wasps-itch",
+    "shiny-bikes-kiss",
+    "six-horses-repeat",
+    "slow-flies-scream",
+    "strong-ants-confess",
+    "stupid-mice-check",
+    "tall-spies-reflect",
+    "three-dogs-clap",
     "twelve-deers-begin",
     "two-years-relate"
   ]
