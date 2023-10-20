@@ -1,4 +1,11 @@
 fragment ProductCustomizable on CustomizableProductInterface @injectable {
+  # manganimeshon customization
+  phonecase {
+    model
+    brand
+    id
+  }
+  # manganimeshon customization
   options {
     uid
     __typename

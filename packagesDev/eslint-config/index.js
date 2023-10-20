@@ -125,7 +125,6 @@ module.exports = {
           {
             name: '@mui/material',
             importNames: [
-              'Autocomplete',
               'Checkbox',
               'Radio',
               'Select',

@@ -9,7 +9,9 @@ export function RowHeroBanner(props: RowHeroBannerFragment) {
   return (
     <HeroBanner
       pageLinks={pageLinks.map(({ url, title }) => (
-        <Button key={url} href={url} variant='outlined' size='large' color='inherit'>
+        <Button key={url} href={url} variant='outlined' size='large' sx={() => ({
+          color: 'background.paper',
+        })}>
           {title}
         </Button>
       ))}
@@ -25,6 +27,7 @@ export function RowHeroBanner(props: RowHeroBannerFragment) {
             width: '50%',
           },
         },
+        color: 'background.paper',
       })}
     >
       <RichText
@@ -32,6 +35,7 @@ export function RowHeroBanner(props: RowHeroBannerFragment) {
         sxRenderer={{
           paragraph: {
             typography: 'overline',
+            color: 'background.paper',
           },
           'heading-one': (theme) => ({
             textTransform: 'uppercase',
@@ -42,6 +46,10 @@ export function RowHeroBanner(props: RowHeroBannerFragment) {
               WebkitTextFillColor: 'transparent',
               WebkitTextStroke: `1.2px #fff`,
             },
+            color: 'background.paper',
+          }),
+          'heading-five': () => ({
+            color: 'background.paper',
           }),
         }}
       />
