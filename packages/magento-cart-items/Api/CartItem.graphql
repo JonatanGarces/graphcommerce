@@ -3,17 +3,15 @@ fragment CartItem on CartItemInterface @injectable {
   quantity
   __typename
   product {
-    uid
     ...ProductLink
     sku
     name
-    url_key
     sku
     thumbnail {
       ...ProductImage
     }
+    ...ProductPagePrice
   }
-
   prices {
     discounts {
       amount {

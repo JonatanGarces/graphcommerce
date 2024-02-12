@@ -1,5 +1,192 @@
 # Change Log
 
+## 8.0.1-canary.4
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+## 8.0.1-canary.1
+
+## 8.0.1-canary.0
+
+## 8.0.0
+
+### Minor Changes
+
+- [#2099](https://github.com/graphcommerce-org/graphcommerce/pull/2099) [`ff796b8`](https://github.com/graphcommerce-org/graphcommerce/commit/ff796b838fae6cb5e35b101500133b0235a8677d) - Support for all customizable product options (except file upload) on the product pages and in the cart.
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`13e23e4`](https://github.com/graphcommerce-org/graphcommerce/commit/13e23e4265bac70fb4d0830e4661019e71ce299f) - Wishlist will now support configurable products and uses the `<ActionCardLayout/>`
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2115](https://github.com/graphcommerce-org/graphcommerce/pull/2115) [`105a1af`](https://github.com/graphcommerce-org/graphcommerce/commit/105a1af8b820de8873e430ae398f1922d39a9110) - Disabled ripple animations on all ActionCard ‘Select’ and ‘Change’ so the rendering is more subtle during checkout.
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2028](https://github.com/graphcommerce-org/graphcommerce/pull/2028) [`dd5499d`](https://github.com/graphcommerce-org/graphcommerce/commit/dd5499daedb0a5cd38081f2bd7892df40bb23e16) - Solved an issue where the quantity selector was not working for bundled products
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+## 8.0.0-canary.90
+
+## 8.0.0-canary.89
+
+## 8.0.0-canary.88
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+### Minor Changes
+
+- [#2099](https://github.com/graphcommerce-org/graphcommerce/pull/2099) [`ff796b8`](https://github.com/graphcommerce-org/graphcommerce/commit/ff796b838fae6cb5e35b101500133b0235a8677d) - Created UI for all customizable options except for the file upload customizable option
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.70
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+## 7.1.0-canary.52
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+### Patch Changes
+
+- [#2115](https://github.com/graphcommerce-org/graphcommerce/pull/2115) [`105a1af8b`](https://github.com/graphcommerce-org/graphcommerce/commit/105a1af8b820de8873e430ae398f1922d39a9110) - Disabled Ripple on all ActionCard ‘Select’ and ‘Change’ so the rendering is more subtle during checkout. ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+## 7.1.0-canary.38
+
+### Minor Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`13e23e426`](https://github.com/graphcommerce-org/graphcommerce/commit/13e23e4265bac70fb4d0830e4661019e71ce299f) - Wishlist will now support configurable products and uses the ActionCardLayout ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 7.1.0-canary.37
+
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
+### Patch Changes
+
+- [#2028](https://github.com/graphcommerce-org/graphcommerce/pull/2028) [`dd5499dae`](https://github.com/graphcommerce-org/graphcommerce/commit/dd5499daedb0a5cd38081f2bd7892df40bb23e16) - Fixed bug where you could only select 1 as quantity for bundled products ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
 ## 7.1.0-canary.23
 
 ## 7.1.0-canary.22
@@ -1193,31 +1380,31 @@
   All occurences of `<Trans>` and `t` need to be replaced:
 
   ```tsx
-  import { Trans, t } from '@lingui/macro'
+  import { Trans, t } from "@lingui/macro";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={t`Account ${foo}`}>
         <Trans>My Translation {foo}</Trans>
       </div>
-    )
+    );
   }
   ```
 
   Needs to be replaced with:
 
   ```tsx
-  import { Trans } from '@lingui/react'
-  import { i18n } from '@lingui/core'
+  import { Trans } from "@lingui/react";
+  import { i18n } from "@lingui/core";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={i18n._(/* i18n */ `Account {foo}`, { foo })}>
-        <Trans key='My Translation {foo}' values={{ foo }}></Trans>
+        <Trans key="My Translation {foo}" values={{ foo }}></Trans>
       </div>
-    )
+    );
   }
   ```
 

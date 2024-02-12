@@ -30,6 +30,7 @@ import {
   defaultConfigurableOptionsSelection,
 } from '@graphcommerce/magento-product-configurable'
 import { DownloadableProductOptions } from '@graphcommerce/magento-product-downloadable'
+import { RecentlyViewedProducts } from '@graphcommerce/magento-recently-viewed-products'
 import { jsonLdProductReview, ProductReviewChip } from '@graphcommerce/magento-review'
 import { redirectOrNotFound, Money, StoreConfigDocument } from '@graphcommerce/magento-store'
 import { ProductWishlistChipDetail } from '@graphcommerce/magento-wishlist'
@@ -41,6 +42,7 @@ import {
   LayoutDocument,
   LayoutNavigation,
   LayoutNavigationProps,
+  productListRenderer,
   RowProduct,
   RowRenderer,
   Usps,
@@ -172,6 +174,7 @@ function ProductPage(props: Props) {
 
       {pages?.[0] && (
         <RowRenderer
+          loadingEager={0}
           content={pages?.[0].content}
           renderer={{
             RowProduct: (rowProps) => (
@@ -185,6 +188,13 @@ function ProductPage(props: Props) {
           }}
         />
       )}
+
+      <RecentlyViewedProducts
+        title={<Trans id='Recently viewed products' />}
+        exclude={[product.sku]}
+        productListRenderer={productListRenderer}
+        sx={(theme) => ({ mb: theme.spacings.xxl })}
+      />
     </>
   )
 }
@@ -196,7 +206,6 @@ ProductPage.pageOptions = {
 export default ProductPage
 
 export const getStaticPaths: GetPageStaticPaths = async ({ locales = [] }) => {
-  if (import.meta.graphCommerce.legacyProductRoute) return { paths: [], fallback: false }
   if (process.env.NODE_ENV === 'development') return { paths: [], fallback: 'blocking' }
 
   const path = (locale: string) => getProductStaticPaths(graphqlSsrClient(locale), locale)
@@ -206,8 +215,6 @@ export const getStaticPaths: GetPageStaticPaths = async ({ locales = [] }) => {
 }
 
 export const getStaticProps: GetPageStaticProps = async ({ params, locale }) => {
-  if (import.meta.graphCommerce.legacyProductRoute) return { notFound: true }
-
   const client = graphqlSharedClient(locale)
   const staticClient = graphqlSsrClient(locale)
 
@@ -217,8 +224,8 @@ export const getStaticProps: GetPageStaticProps = async ({ params, locale }) => 
   const productPage = staticClient.query({ query: ProductPage2Document, variables: { urlKey } })
   const layout = staticClient.query({ query: LayoutDocument, fetchPolicy: 'cache-first' })
 
-  const product = productPage.then((pp) =>
-    pp.data.products?.items?.find((p) => p?.url_key === urlKey),
+  const product = productPage.then(
+    (pp) => pp.data.products?.items?.find((p) => p?.url_key === urlKey),
   )
 
   const pages = hygraphPageContent(staticClient, 'product/global', product, true)

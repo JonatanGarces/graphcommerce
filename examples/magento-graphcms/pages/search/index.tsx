@@ -109,7 +109,7 @@ function SearchResultPage(props: SearchResultProps) {
             <NoSearchResults search={search} />
           </Container>
         )}
-        {products && products.items && products?.items?.length > 0 && (
+        {((products && products.items && products?.items?.length > 0) || params.filters) && (
           <SearchFilterLayout
             params={params}
             filters={filters}
@@ -156,7 +156,11 @@ export const getStaticProps: GetPageStaticProps = async ({ params, locale }) => 
 
   const products = staticClient.query({
     query: ProductListDocument,
-    variables: { ...productListParams, search, pageSize: 12 },
+    variables: {
+      pageSize: (await conf).data.storeConfig?.grid_per_page ?? 12,
+      ...productListParams,
+      search,
+    },
   })
 
   const categories = search

@@ -1,5 +1,173 @@
 # Change Log
 
+## 8.0.1-canary.4
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+## 8.0.1-canary.1
+
+## 8.0.1-canary.0
+
+## 8.0.0
+
+### Patch Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`4a29bf7`](https://github.com/graphcommerce-org/graphcommerce/commit/4a29bf7e0d6cfa4ee360ef3f28b779689f6c1e11) - Include @connection, @export, @defer and @nonreactive in schema, so they can be used, in queries
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`072cd14`](https://github.com/graphcommerce-org/graphcommerce/commit/072cd14f29b58b907ce04ee294e8fb9c6190556a) - Allow `configurable_product_options_selection` to be stored in the `localStorage` so queries do not need to be re-executed when the page loads.
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+## 8.0.0-canary.90
+
+## 8.0.0-canary.89
+
+## 8.0.0-canary.88
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+## 8.0.0-canary.70
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+## 7.1.0-canary.52
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+## 7.1.0-canary.38
+
+### Patch Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`4a29bf7e0`](https://github.com/graphcommerce-org/graphcommerce/commit/4a29bf7e0d6cfa4ee360ef3f28b779689f6c1e11) - Include @connection, @export, @defer and @nonreactive in schema, so they can be used, in queries ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`072cd14f2`](https://github.com/graphcommerce-org/graphcommerce/commit/072cd14f29b58b907ce04ee294e8fb9c6190556a) - Allow configurable_product_options_selection to be stored in the localStorage so queries can be resolved correctly ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 7.1.0-canary.37
+
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
 ## 7.1.0-canary.23
 
 ## 7.1.0-canary.22

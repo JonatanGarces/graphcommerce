@@ -40,6 +40,9 @@ msgstr "Aggiungi nuovo indirizzo"
 msgid "Add to Cart"
 msgstr "Aggiungi al carrello"
 
+msgid "Add to cart quantity"
+msgstr "Aggiungi al carrello quantità"
+
 msgid "Add to comparison"
 msgstr "Aggiungi al confronto"
 
@@ -144,6 +147,9 @@ msgstr "Completa il pagamento sul sito del tuo banco."
 
 msgid "Complete your purchase"
 msgstr "Completa il tuo acquisto"
+
+msgid "Configure"
+msgstr "Configura"
 
 msgid "Confirm new email"
 msgstr "Conferma nuovo indirizzo email"
@@ -298,11 +304,17 @@ msgstr "Incluso {0}"
 msgid "Increase"
 msgstr "Aumentare"
 
+msgid "Invalid date"
+msgstr "Data non valida"
+
 msgid "Invalid email address"
 msgstr "Indirizzo email non valido"
 
 msgid "Invalid phone number"
 msgstr "Numero di telefono non valido"
+
+msgid "It appears you are offline, please try again later."
+msgstr "Sembra che tu sia offline, riprova più tardi."
 
 msgid "Last Name"
 msgstr "Cognome"
@@ -319,17 +331,11 @@ msgstr "Modalità chiara"
 msgid "Loading"
 msgstr "Caricamento"
 
-msgid "Loading wishlist"
-msgstr "Caricamento lista desideri"
-
 msgid "Loading your account"
 msgstr "Caricamento del tuo account"
 
 msgid "Loading your data"
 msgstr "Caricamento dati"
-
-msgid "Log in"
-msgstr "Accedi"
 
 msgid "Log in to continue shopping"
 msgstr "Accedi per continuare gli acquisti"
@@ -418,14 +424,17 @@ msgstr "Ordine #{orderId}"
 msgid "Order before 22:00"
 msgstr "Ordina prima delle 22:00"
 
+msgid "Order date"
+msgstr "data dell'ordine"
+
+msgid "Order details"
+msgstr "Dettagli dell'ordine"
+
 msgid "Order not found"
 msgstr "Ordine non trovato"
 
 msgid "Order number"
 msgstr "Numero ordine"
-
-msgid "Order status"
-msgstr "Stato ordine"
 
 msgid "Order summary"
 msgstr "Riepilogo ordine"
@@ -526,6 +535,9 @@ msgstr "Prodotto non disponibile in {allLabels}"
 msgid "Products"
 msgstr "Prodotti"
 
+msgid "Recently viewed products"
+msgstr "Prodotti visionati recentemente"
+
 msgid "Region"
 msgstr "Regione"
 
@@ -552,6 +564,9 @@ msgstr "Risultati per ‘{search}’"
 
 msgid "Review"
 msgstr "Review"
+
+msgid "Review score"
+msgstr "Punteggio di revisione"
 
 msgid "Reviews"
 msgstr "Recensioni"
@@ -610,8 +625,17 @@ msgstr "Esci"
 msgid "Sign up for our newsletter and stay updated"
 msgstr "Iscriviti alla nostra newsletter e rimani aggiornato"
 
+msgid "Skip to main content"
+msgstr "Passa al contenuto principale"
+
 msgid "Some items in your cart contain errors, please update or remove them, then try again."
 msgstr "Alcuni articoli nel tuo carrello contengono errori, aggiorna o rimuovi e riprova."
+
+msgid "Something went wrong"
+msgstr "Qualcosa è andato storto"
+
+msgid "Something went wrong on the server, please try again later."
+msgstr "Qualcosa è andato storto sul server, riprova più tardi."
 
 msgid "Sort"
 msgstr "Ordinare"
@@ -685,6 +709,9 @@ msgstr "Il pagamento non è stato completato, riprova o seleziona un metodo di p
 msgid "The payment is refused, please try again or select a different payment method."
 msgstr "Il pagamento è stato rifiutato, riprova o seleziona un metodo di pagamento differente."
 
+msgid "There is a maximum of ‘{maxLength}’ characters"
+msgstr "È consentito un massimo di caratteri \"{maxLength}\"."
+
 msgid "This cart is assigned to {email}. Please sign in to continue shopping."
 msgstr "Questo carrello è assegnato a {email}. Accedi per continuare gli acquisti."
 
@@ -738,9 +765,6 @@ msgstr "Non abbiamo trovato nessun risultato per {term}"
 
 msgid "We couldn't find the page you were looking for"
 msgstr "Non abbiamo trovato la pagina che stavi cercando"
-
-msgid "Welcome back!"
-msgstr "Benvenuto!"
 
 msgid "We’re processing your payment, this will take a few seconds."
 msgstr "Stiamo elaborando il tuo pagamento, questo richiederà alcuni secondi."

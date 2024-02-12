@@ -5,7 +5,7 @@ import {
   flushMeasurePerf,
   NormalizedCacheObject,
 } from '@graphcommerce/graphql'
-import { nonNullable, isTypename } from '@graphcommerce/next-ui'
+import { nonNullable, isTypename, storefrontConfig } from '@graphcommerce/next-ui'
 import { Redirect } from 'next'
 import { StoreConfigQuery } from '../StoreConfig.gql'
 import { defaultLocale } from '../localeToStore'
@@ -24,14 +24,15 @@ const notFound = (from: string, reason: string) => {
 }
 
 const redirect = (from: string, to: string, permanent: boolean, locale?: string) => {
-  const prefix = locale === defaultLocale() ? '' : `/${locale}`
+  const localeHasDomain = Boolean(storefrontConfig(locale)?.domain)
+  const prefix = localeHasDomain || locale === defaultLocale() ? '' : `/${locale}`
   const destination = `${prefix}${to}`
 
   flushMeasurePerf()
 
   // eslint-disable-next-line no-console
   console.log(
-    `[redirectOrNotFound: /${prefix}/${from}] ${
+    `[redirectOrNotFound: ${prefix ? `/${prefix}` : ''}/${from}] ${
       permanent ? 'Permanent' : 'Temporary'
     } redirect to ${destination}`,
   )
@@ -112,9 +113,6 @@ export async function redirectOrNotFound(
         'GroupedProduct',
       ])
     ) {
-      if (import.meta.graphCommerce.legacyProductRoute)
-        return notFound(from, 'Redirects are only supported for single product pages.')
-
       const productRoute = import.meta.graphCommerce.productRoute ?? '/p/'
 
       if (redirectUrl) return redirect(from, `${productRoute}${redirectUrl}`, permanent, locale)

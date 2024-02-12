@@ -1,5 +1,279 @@
 # Change Log
 
+## 8.0.1-canary.4
+
+### Patch Changes
+
+- [#2191](https://github.com/graphcommerce-org/graphcommerce/pull/2191) [`13ffa6b`](https://github.com/graphcommerce-org/graphcommerce/commit/13ffa6b945f1c72bf1fdc9298e4ce5dd76b48d73) - When a user was logging in from the checkout react would be caught in an infinite loop and thus the page would hang
+  ([@JoshuaS98](https://github.com/JoshuaS98))
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+### Patch Changes
+
+- [#2177](https://github.com/graphcommerce-org/graphcommerce/pull/2177) [`816d789`](https://github.com/graphcommerce-org/graphcommerce/commit/816d7893159528bbe4ffc51c3958c806b81b58b0) - Change sorting for customer orders in Descending Created at order
+  ([@LaurensFranken](https://github.com/LaurensFranken))
+
+## 8.0.1-canary.1
+
+## 8.0.1-canary.0
+
+### Patch Changes
+
+- [#2187](https://github.com/graphcommerce-org/graphcommerce/pull/2187) [`09a2cc3`](https://github.com/graphcommerce-org/graphcommerce/commit/09a2cc35ceb5e714ffd02e573eebe7de842ae327) - Do not try to automatically invalidate the current token and fully rely on the Session Expired dialog
+  ([@paales](https://github.com/paales))
+
+- [#2187](https://github.com/graphcommerce-org/graphcommerce/pull/2187) [`ee969bf`](https://github.com/graphcommerce-org/graphcommerce/commit/ee969bfc5415392747b04e0484685f5c611a2559) - After signing out the currentCartId was still returning a value causing the cart to be shown after signing out
+  ([@paales](https://github.com/paales))
+
+## 8.0.0
+
+### Minor Changes
+
+- [#2175](https://github.com/graphcommerce-org/graphcommerce/pull/2175) [`a6bcb87`](https://github.com/graphcommerce-org/graphcommerce/commit/a6bcb8785d54ef735d82154a775822d84f2b2b80) - Autofill country dropdown in CreateCustomerAddressForm so AddPostcodeNLAddressFields plugin works by default
+  ([@Giovanni-Schroevers](https://github.com/Giovanni-Schroevers))
+
+- [#2110](https://github.com/graphcommerce-org/graphcommerce/pull/2110) [`d2e716d`](https://github.com/graphcommerce-org/graphcommerce/commit/d2e716d437fcfed13388ef536a8e73513744027b) - ---
+
+  '@graphcommerce/magento-cart-email': minor '@graphcommerce/magento-customer': minor
+
+  ***
+
+  Added a new `enableGuestCheckoutLogin` configuration: During customer login, GraphCommerce queries Magento to determine whether the customer account already exists or not. If not, the sign-up form is shown instead.
+
+  To restore previous behavior, set `enableGuestCheckoutLogin` to true. For Magento versions, 2.4.7, 2.4.6-p1 and up, 2.4.5-p3 and up, 2.4.4-p4 and up, the following setting must be set to Yes: `Stores -> Configuration -> Sales -> Checkout -> Checkout Options -> Enable Guest Checkout Login` ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+### Patch Changes
+
+- [#2091](https://github.com/graphcommerce-org/graphcommerce/pull/2091) [`5b865d3`](https://github.com/graphcommerce-org/graphcommerce/commit/5b865d376fe3b830a03af15b56986a0448af4987) - Order details page in the customer account section is completely redesigned to be more in line with other areas.
+  ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`a5c6550`](https://github.com/graphcommerce-org/graphcommerce/commit/a5c65506a7e72bd9ea101f665ce201e82396c63c) - Allow passing skip to useCustomerQuery and useGuestQuery
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#2170](https://github.com/graphcommerce-org/graphcommerce/pull/2170) [`f3e906f`](https://github.com/graphcommerce-org/graphcommerce/commit/f3e906f7e374ce22d36af29c0f3c8153e18300e6) - Solved an issue where the inactive cart would set as the current cart when the customer had signed in, checked out their cart, session expired and tried to log in again.
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2107](https://github.com/graphcommerce-org/graphcommerce/pull/2107) [`2f51504`](https://github.com/graphcommerce-org/graphcommerce/commit/2f5150456eabcce410ad8a0f1cbebeedabb6564c) - Remember email adress when going from checkout to signin/up form
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2128](https://github.com/graphcommerce-org/graphcommerce/pull/2128) [`2320f8f`](https://github.com/graphcommerce-org/graphcommerce/commit/2320f8fa28713f45f0a9ecfc7d8623120add2a9a) - Fixed bug which caused region to not be set properly if user swapped countries in the checkout process.
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+- [#1999](https://github.com/graphcommerce-org/graphcommerce/pull/1999) [`ab834fb`](https://github.com/graphcommerce-org/graphcommerce/commit/ab834fbfe057fb507c371a6d22af282cc1b195d4) - Added a new 'Session expired' dialog that is shown when a GraphQL query or mutation returns a `graphql-authorization` error. This error is returned when the user's session has expired. The dialog allows the user to sign in again and then the query or mutation is re-executed.
+  ([@paales](https://github.com/paales))
+
+- [#2166](https://github.com/graphcommerce-org/graphcommerce/pull/2166) [`304b816`](https://github.com/graphcommerce-org/graphcommerce/commit/304b81659caf82d9f500401d21da4110dd40db61) - When a user is logged in the modal is dismissed immediately without showing a succes page. This speeds up the interaction with the site.
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#1999](https://github.com/graphcommerce-org/graphcommerce/pull/1999) [`c11f3b8`](https://github.com/graphcommerce-org/graphcommerce/commit/c11f3b88f187bb8e0059a6940b9835a076e5faf8) - Created a `debug.sessions` config that allows debugging sessions. Enable with `GC_DEBUG_SESSIONS=1` in your env or modify your graphcommerce.config.js
+  ([@paales](https://github.com/paales))
+
+- [#2087](https://github.com/graphcommerce-org/graphcommerce/pull/2087) [`42c33c6`](https://github.com/graphcommerce-org/graphcommerce/commit/42c33c6e3adceee400bc9f10ec416731db9279c0) - The message when the email was updated was unstyled.
+  ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2082](https://github.com/graphcommerce-org/graphcommerce/pull/2082) [`2e8d19c`](https://github.com/graphcommerce-org/graphcommerce/commit/2e8d19cccd305f0e8eb4c29d05161af6cfdb9d84) - Add 'Current email' translation
+  ([@StefanAngenent](https://github.com/StefanAngenent))
+
+- [#2098](https://github.com/graphcommerce-org/graphcommerce/pull/2098) [`ca45472`](https://github.com/graphcommerce-org/graphcommerce/commit/ca45472246e084f4b88f91bc700351e29c63e0e2) - Fix `<EditAddressForm />` when addition field is null or undefined
+  ([@JoshuaS98](https://github.com/JoshuaS98))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+### Minor Changes
+
+- [#2175](https://github.com/graphcommerce-org/graphcommerce/pull/2175) [`a6bcb87`](https://github.com/graphcommerce-org/graphcommerce/commit/a6bcb8785d54ef735d82154a775822d84f2b2b80) - Autofill country dropdown in CreateCustomerAddressForm so AddPostcodeNLAddressFields plugin works by default
+  ([@Giovanni-Schroevers](https://github.com/Giovanni-Schroevers))
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+## 8.0.0-canary.90
+
+### Patch Changes
+
+- [#2170](https://github.com/graphcommerce-org/graphcommerce/pull/2170) [`f3e906f`](https://github.com/graphcommerce-org/graphcommerce/commit/f3e906f7e374ce22d36af29c0f3c8153e18300e6) - fix(GCOM-1317): fix bug where inactive cached cart could be set as currentCartId
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+## 8.0.0-canary.89
+
+## 8.0.0-canary.88
+
+### Patch Changes
+
+- [#2166](https://github.com/graphcommerce-org/graphcommerce/pull/2166) [`304b816`](https://github.com/graphcommerce-org/graphcommerce/commit/304b81659caf82d9f500401d21da4110dd40db61) - Dismiss login page and go back to previous page asap when logging in
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+## 8.0.0-canary.70
+
+### Patch Changes
+
+- [#2128](https://github.com/graphcommerce-org/graphcommerce/pull/2128) [`2320f8f`](https://github.com/graphcommerce-org/graphcommerce/commit/2320f8fa28713f45f0a9ecfc7d8623120add2a9a) - Fixed bug which caused region to not be set properly if user swapped countries in the checkout process.
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+### Patch Changes
+
+- [#1999](https://github.com/graphcommerce-org/graphcommerce/pull/1999) [`ab834fb`](https://github.com/graphcommerce-org/graphcommerce/commit/ab834fbfe057fb507c371a6d22af282cc1b195d4) - Added user session reevaluation after unathenticated call. Queries will be paused untill user has signed in again
+  ([@paales](https://github.com/paales))
+
+- [#1999](https://github.com/graphcommerce-org/graphcommerce/pull/1999) [`c11f3b8`](https://github.com/graphcommerce-org/graphcommerce/commit/c11f3b88f187bb8e0059a6940b9835a076e5faf8) - Created a debug.sessions config that allows debugging sessions. Enable with GC_DEBUG_SESSIONS=1 in your env or modify your graphcommerce.config.js
+  ([@paales](https://github.com/paales))
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+## 7.1.0-canary.52
+
+### Minor Changes
+
+- [#2110](https://github.com/graphcommerce-org/graphcommerce/pull/2110) [`d2e716d43`](https://github.com/graphcommerce-org/graphcommerce/commit/d2e716d437fcfed13388ef536a8e73513744027b) - ---
+
+  '@graphcommerce/magento-cart-email': minor '@graphcommerce/magento-customer': minor
+
+  ***
+
+  Added a new enableGuestCheckoutLogin configuration: During customer login, GraphCommerce queries Magento to determine whether the customer account already exists or not. If not, the sign-up form is shown instead.
+
+  To restore previous behavior, set enableGuestCheckoutLogin to true. For Magento versions, 2.4.7, 2.4.6-p1 and up, 2.4.5-p3 and up, 2.4.4-p4 and up, the following setting must be set to Yes: `Stores -> Configuration -> Sales -> Checkout -> Checkout Options -> Enable Guest Checkout Login` ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+## 7.1.0-canary.38
+
+### Patch Changes
+
+- [#2048](https://github.com/graphcommerce-org/graphcommerce/pull/2048) [`a5c65506a`](https://github.com/graphcommerce-org/graphcommerce/commit/a5c65506a7e72bd9ea101f665ce201e82396c63c) - Allow passing skip to useCustomerQuery and useGuestQuery ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 7.1.0-canary.37
+
+## 7.1.0-canary.36
+
+### Patch Changes
+
+- [#2107](https://github.com/graphcommerce-org/graphcommerce/pull/2107) [`2f5150456`](https://github.com/graphcommerce-org/graphcommerce/commit/2f5150456eabcce410ad8a0f1cbebeedabb6564c) - feat(GCOM-1237): remember email adress when going from checkout to si… ([@FrankHarland](https://github.com/FrankHarland))
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+### Patch Changes
+
+- [#2091](https://github.com/graphcommerce-org/graphcommerce/pull/2091) [`5b865d376`](https://github.com/graphcommerce-org/graphcommerce/commit/5b865d376fe3b830a03af15b56986a0448af4987) - Update OrderDetails and styling ([@StefanAngenent](https://github.com/StefanAngenent))
+
+## 7.1.0-canary.31
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
 ## 7.1.0-canary.23
 
 ### Patch Changes
@@ -1333,31 +1607,31 @@
   All occurences of `<Trans>` and `t` need to be replaced:
 
   ```tsx
-  import { Trans, t } from '@lingui/macro'
+  import { Trans, t } from "@lingui/macro";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={t`Account ${foo}`}>
         <Trans>My Translation {foo}</Trans>
       </div>
-    )
+    );
   }
   ```
 
   Needs to be replaced with:
 
   ```tsx
-  import { Trans } from '@lingui/react'
-  import { i18n } from '@lingui/core'
+  import { Trans } from "@lingui/react";
+  import { i18n } from "@lingui/core";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={i18n._(/* i18n */ `Account {foo}`, { foo })}>
-        <Trans key='My Translation {foo}' values={{ foo }}></Trans>
+        <Trans key="My Translation {foo}" values={{ foo }}></Trans>
       </div>
-    )
+    );
   }
   ```
 

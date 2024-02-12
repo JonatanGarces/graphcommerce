@@ -40,6 +40,9 @@ msgstr "Add new address"
 msgid "Add to Cart"
 msgstr "Add to Cart"
 
+msgid "Add to cart quantity"
+msgstr "Add to cart quantity"
+
 msgid "Add to comparison"
 msgstr "Add to comparison"
 
@@ -144,6 +147,9 @@ msgstr "Complete the payment on your bank’s website."
 
 msgid "Complete your purchase"
 msgstr "Complete your purchase"
+
+msgid "Configure"
+msgstr "Configure"
 
 msgid "Confirm new email"
 msgstr "Confirm new email"
@@ -298,11 +304,17 @@ msgstr "Including {0}"
 msgid "Increase"
 msgstr "Increase"
 
+msgid "Invalid date"
+msgstr "Invalid date"
+
 msgid "Invalid email address"
 msgstr "Invalid email address"
 
 msgid "Invalid phone number"
 msgstr "Invalid phone number"
+
+msgid "It appears you are offline, please try again later."
+msgstr "It appears you are offline, please try again later."
 
 msgid "Last Name"
 msgstr "Last Name"
@@ -319,17 +331,11 @@ msgstr "Light Mode"
 msgid "Loading"
 msgstr "Loading"
 
-msgid "Loading wishlist"
-msgstr "Loading wishlist"
-
 msgid "Loading your account"
 msgstr "Loading your account"
 
 msgid "Loading your data"
 msgstr "Loading your data"
-
-msgid "Log in"
-msgstr "Log in"
 
 msgid "Log in to continue shopping"
 msgstr "Log in to continue shopping"
@@ -418,14 +424,17 @@ msgstr "Order #{orderId}"
 msgid "Order before 22:00"
 msgstr "Order before 22:00"
 
+msgid "Order date"
+msgstr "Order date"
+
+msgid "Order details"
+msgstr "Order details"
+
 msgid "Order not found"
 msgstr "Order not found"
 
 msgid "Order number"
 msgstr "Order number"
-
-msgid "Order status"
-msgstr "Order status"
 
 msgid "Order summary"
 msgstr "Order summary"
@@ -526,6 +535,9 @@ msgstr "Product not available in {allLabels}"
 msgid "Products"
 msgstr "Products"
 
+msgid "Recently viewed products"
+msgstr "Recently viewed products"
+
 msgid "Region"
 msgstr "Region"
 
@@ -552,6 +564,9 @@ msgstr "Results for ‘{search}’"
 
 msgid "Review"
 msgstr "Review"
+
+msgid "Review score"
+msgstr "Review score"
 
 msgid "Reviews"
 msgstr "Reviews"
@@ -610,8 +625,17 @@ msgstr "Sign out"
 msgid "Sign up for our newsletter and stay updated"
 msgstr "Sign up for our newsletter and stay updated"
 
+msgid "Skip to main content"
+msgstr "Skip to main content"
+
 msgid "Some items in your cart contain errors, please update or remove them, then try again."
 msgstr "Some items in your cart contain errors, please update or remove them, then try again."
+
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+msgid "Something went wrong on the server, please try again later."
+msgstr "Something went wrong on the server, please try again later."
 
 msgid "Sort"
 msgstr "Sort"
@@ -685,6 +709,9 @@ msgstr "The payment hasn't completed, please try again or select a different pay
 msgid "The payment is refused, please try again or select a different payment method."
 msgstr "The payment is refused, please try again or select a different payment method."
 
+msgid "There is a maximum of ‘{maxLength}’ characters"
+msgstr "There is a maximum of ‘{maxLength}’ characters"
+
 msgid "This cart is assigned to {email}. Please sign in to continue shopping."
 msgstr "This cart is assigned to {email}. Please sign in to continue shopping."
 
@@ -738,9 +765,6 @@ msgstr "We couldn't find any results for {term}"
 
 msgid "We couldn't find the page you were looking for"
 msgstr "We couldn't find the page you were looking for"
-
-msgid "Welcome back!"
-msgstr "Welcome back!"
 
 msgid "We’re processing your payment, this will take a few seconds."
 msgstr "We’re processing your payment, this will take a few seconds."

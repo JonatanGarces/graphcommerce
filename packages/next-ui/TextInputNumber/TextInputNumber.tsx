@@ -32,6 +32,9 @@ const name = 'TextInputNumber' as const
 const parts = ['quantity', 'quantityInput', 'button'] as const
 const { withState } = extendableComponent<OwnerState, typeof name, typeof parts>(name, parts)
 
+/**
+ * @deprecated Please us NumberFieldElement
+ */
 export function TextInputNumber(props: TextInputNumberProps) {
   const {
     DownProps = {},
@@ -102,6 +105,9 @@ export function TextInputNumber(props: TextInputNumberProps) {
           width: responsiveVal(90, 120),
         },
         {
+          '& input[type=number]': {
+            MozAppearance: 'textfield',
+          },
           '& .MuiOutlinedInput-root': {
             px: '3px',
             display: 'grid',
@@ -159,8 +165,8 @@ export function TextInputNumber(props: TextInputNumberProps) {
         updateDisabled(e.target)
       }}
       inputProps={{
-        ...inputProps,
         'aria-label': i18n._(/* i18n */ 'Number'),
+        ...inputProps,
         sx: [
           {
             typography: 'body1',

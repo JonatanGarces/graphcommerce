@@ -1,9 +1,3 @@
-/**
- * - Boven de product description zetten? in rowrenderer zetten
- * - Hoe gaan we dit optioneel maken?
- * - Hoe gaan we dit upgradebaar maken? management sdk
- */
-
 import { HygraphPagesQuery } from '@graphcommerce/graphcms-ui'
 import { ApolloClient, NormalizedCacheObject } from '@graphcommerce/graphql'
 import {
@@ -85,6 +79,8 @@ function matchCondition(
   return false
 }
 
+type Page = HygraphPagesQuery['pages'][number]
+
 /**
  * Fetch the page content for the given urls.
  *
@@ -119,27 +115,48 @@ export async function hygraphDynamicRows(
 
   const [pageResult, dynamicResult] = await Promise.all([pageQuery, dynamicRows])
 
+  const page = pageResult.data.pages[0] as Page | undefined
+
   // Create a copy of the content array.
-  const content = [...(pageResult.data.pages[0]?.content ?? [])]
+  const content = page?.content ?? []
 
   dynamicResult?.data.dynamicRows.forEach((dynamicRow) => {
-    const { placement, target, row } = dynamicRow
-    if (!row) return
+    const { placement, target, rows, row } = dynamicRow
+    if (!rows && !row) return
+
+    const rowsToMerge = rows
+    if (row && rows.length === 0) rowsToMerge.push(row)
 
     if (!target) {
-      if (placement === 'BEFORE') content.unshift(row)
-      else content.push(row)
+      if (placement === 'BEFORE') content.unshift(...rowsToMerge)
+      else content.push(...rowsToMerge)
       return
     }
 
     const targetIdx = content.findIndex((c) => c.id === target.id)
-    if (placement === 'BEFORE') content.splice(targetIdx, 0, row)
-    if (placement === 'AFTER') content.splice(targetIdx + 1, 0, row)
-    if (placement === 'REPLACE') content.splice(targetIdx, 1, row)
+    if (placement === 'BEFORE') content.splice(targetIdx, 0, ...rowsToMerge)
+    if (placement === 'AFTER') content.splice(targetIdx + 1, 0, ...rowsToMerge)
+    if (placement === 'REPLACE') content.splice(targetIdx, 1, ...rowsToMerge)
   })
 
   if (!content.length) return pageResult
 
+  const dynamicPage: Page = {
+    id: 'dynamic-page',
+    __typename: 'Page',
+    metaRobots: 'INDEX_FOLLOW',
+    metaTitle: '',
+    metaDescription: '',
+    url: '',
+    content: [],
+    relatedPages: [],
+  }
+
   // Return the merged page result.
-  return { data: { ...pageResult.data, pages: [{ ...pageResult.data.pages[0], content }] } }
+  return {
+    data: {
+      ...pageResult.data,
+      pages: [{ ...dynamicPage, ...page, content }],
+    },
+  }
 }

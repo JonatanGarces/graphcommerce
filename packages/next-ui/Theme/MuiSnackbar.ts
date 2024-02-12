@@ -1,6 +1,6 @@
-import { ComponentsVariants } from '@mui/material'
+import { ComponentsVariants, Theme } from '@mui/material'
 
-type SnackbarVariants = NonNullable<ComponentsVariants['MuiSnackbar']>
+type SnackbarVariants = NonNullable<ComponentsVariants<Theme>['MuiSnackbar']>
 
 /**
  * The current implementation of the MuiSnackbar will only be 50% wide if no width is specificed,
@@ -22,8 +22,10 @@ export const MuiSnackbar: SnackbarVariants = [
           },
         },
       '&.MuiSnackbar-anchorOriginBottomCenter': {
-        left: 0,
-        right: 0,
+        [theme.breakpoints.up('md')]: {
+          left: theme.page.horizontal,
+          right: theme.page.horizontal,
+        },
         transform: 'unset',
       },
     }),

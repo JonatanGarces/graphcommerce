@@ -1,5 +1,206 @@
 # Change Log
 
+## 8.0.1-canary.4
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+## 8.0.1-canary.1
+
+## 8.0.1-canary.0
+
+## 8.0.0
+
+### Patch Changes
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`7664e45`](https://github.com/graphcommerce-org/graphcommerce/commit/7664e45873142078eb6681fd1bb268db8035cb2e) - New `<ProductScroller />` component for easy horizontal product scrollers.
+  ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a2037`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo.
+  ([@carlocarels90](https://github.com/carlocarels90))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`eb29cbe`](https://github.com/graphcommerce-org/graphcommerce/commit/eb29cbef56f8f7275ffe6760ef5e9f8d2598c7c4) - Added the `<RecentlyViewedProducts/>` feature to product pages.
+  ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2122](https://github.com/graphcommerce-org/graphcommerce/pull/2122) [`7750f72`](https://github.com/graphcommerce-org/graphcommerce/commit/7750f7253ded34acb4cd8b75598bf0ad1bca6d5c) - Added `.graphqlrc.yml` for graphql file autocompletion in projects using VSCode.
+  ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2103](https://github.com/graphcommerce-org/graphcommerce/pull/2103) [`23392ba`](https://github.com/graphcommerce-org/graphcommerce/commit/23392babb89ce3e77dc98713ee897f72ab66d6a1) - Prevent + / - qty buttons from being render over the “Start Checkout” button
+  ([@FrankHarland](https://github.com/FrankHarland))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`5f4455b`](https://github.com/graphcommerce-org/graphcommerce/commit/5f4455b1cccddf1501f0279e5ca2d9277a07ff07) - New `<ProductListItemSkeleton />` component and added support to the productListRenderer. Used for the new Recently Viewed Products feature.
+  ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2004](https://github.com/graphcommerce-org/graphcommerce/pull/2004) [`53947d3`](https://github.com/graphcommerce-org/graphcommerce/commit/53947d39f2f3ee578c14903c96a2b356d99d9475) - Implemented 'Message' variant for `<RowColumnOne/>` to show an important message which, after dismissing, will not show again
+  ([@bramvanderholst](https://github.com/bramvanderholst))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+## 8.0.0-canary.90
+
+## 8.0.0-canary.89
+
+## 8.0.0-canary.88
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+## 8.0.0-canary.70
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+### Patch Changes
+
+- [#2122](https://github.com/graphcommerce-org/graphcommerce/pull/2122) [`7750f7253`](https://github.com/graphcommerce-org/graphcommerce/commit/7750f7253ded34acb4cd8b75598bf0ad1bca6d5c) - Added .graphqlrc.yml for graphql file autocompletion ([@bramvanderholst](https://github.com/bramvanderholst))
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+### Patch Changes
+
+- [#2004](https://github.com/graphcommerce-org/graphcommerce/pull/2004) [`53947d39f`](https://github.com/graphcommerce-org/graphcommerce/commit/53947d39f2f3ee578c14903c96a2b356d99d9475) - Implemented Message variant for RowColumnOne to show an important message which, after dismissing, will not show again ([@bramvanderholst](https://github.com/bramvanderholst))
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+## 7.1.0-canary.52
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+### Patch Changes
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`7664e4587`](https://github.com/graphcommerce-org/graphcommerce/commit/7664e45873142078eb6681fd1bb268db8035cb2e) - Added ProductScroller component with built-in skeleton loader ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`eb29cbef5`](https://github.com/graphcommerce-org/graphcommerce/commit/eb29cbef56f8f7275ffe6760ef5e9f8d2598c7c4) - Added recently viewed products to product pages ([@bramvanderholst](https://github.com/bramvanderholst))
+
+- [#2077](https://github.com/graphcommerce-org/graphcommerce/pull/2077) [`5f4455b1c`](https://github.com/graphcommerce-org/graphcommerce/commit/5f4455b1cccddf1501f0279e5ca2d9277a07ff07) - Added Skeleton render type to productListRenderer ([@bramvanderholst](https://github.com/bramvanderholst))
+
+## 7.1.0-canary.38
+
+## 7.1.0-canary.37
+
+### Patch Changes
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a203737`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo. ([@carlocarels90](https://github.com/carlocarels90))
+
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+### Patch Changes
+
+- [#2103](https://github.com/graphcommerce-org/graphcommerce/pull/2103) [`23392babb`](https://github.com/graphcommerce-org/graphcommerce/commit/23392babb89ce3e77dc98713ee897f72ab66d6a1) - feat(GCOM-1215): prevent + / - qty buttons from overlapping the “Star… ([@FrankHarland](https://github.com/FrankHarland))
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
 ## 7.1.0-canary.23
 
 ## 7.1.0-canary.22
@@ -3500,31 +3701,31 @@
   All occurences of `<Trans>` and `t` need to be replaced:
 
   ```tsx
-  import { Trans, t } from '@lingui/macro'
+  import { Trans, t } from "@lingui/macro";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={t`Account ${foo}`}>
         <Trans>My Translation {foo}</Trans>
       </div>
-    )
+    );
   }
   ```
 
   Needs to be replaced with:
 
   ```tsx
-  import { Trans } from '@lingui/react'
-  import { i18n } from '@lingui/core'
+  import { Trans } from "@lingui/react";
+  import { i18n } from "@lingui/core";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={i18n._(/* i18n */ `Account {foo}`, { foo })}>
-        <Trans key='My Translation {foo}' values={{ foo }}></Trans>
+        <Trans key="My Translation {foo}" values={{ foo }}></Trans>
       </div>
-    )
+    );
   }
   ```
 

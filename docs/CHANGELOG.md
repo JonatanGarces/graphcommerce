@@ -1,5 +1,217 @@
 # Change Log
 
+## 8.0.1-canary.4
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+## 8.0.1-canary.1
+
+### Patch Changes
+
+- [#2186](https://github.com/graphcommerce-org/graphcommerce/pull/2186) [`09eb25c`](https://github.com/graphcommerce-org/graphcommerce/commit/09eb25c9892bf4cf57519024e31c2ae4cf2f7a0b) - Update Magento known issues
+  ([@hnsr](https://github.com/hnsr))
+
+## 8.0.1-canary.0
+
+### Patch Changes
+
+- [#2187](https://github.com/graphcommerce-org/graphcommerce/pull/2187) [`6c4cee8`](https://github.com/graphcommerce-org/graphcommerce/commit/6c4cee8469ee4934281bda53ac96aeb5af2f9479) - Make sure the config page can be properly rendered in the docs
+  ([@paales](https://github.com/paales))
+
+## 8.0.0
+
+### Minor Changes
+
+- [#2106](https://github.com/graphcommerce-org/graphcommerce/pull/2106) [`9f8c3ca`](https://github.com/graphcommerce-org/graphcommerce/commit/9f8c3cac214006315055f37cf8d4a783eb99a7ec) - Split off Magento known issues to separate page
+  ([@hnsr](https://github.com/hnsr))
+
+### Patch Changes
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a2037`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo.
+  ([@carlocarels90](https://github.com/carlocarels90))
+
+- [`b850ab0`](https://github.com/graphcommerce-org/graphcommerce/commit/b850ab06e3fff1cd274651d8082557ed2c308f55) - Updated roadmap and feature-list
+  ([@paales](https://github.com/paales))
+
+- [#2172](https://github.com/graphcommerce-org/graphcommerce/pull/2172) [`279599e`](https://github.com/graphcommerce-org/graphcommerce/commit/279599e7a86bd96ea9e36065af3c367df9e02a63) - Updated examples in the documentation to reflect the changes made in GraphCommerce.
+  ([@paales](https://github.com/paales))
+
+- [#2119](https://github.com/graphcommerce-org/graphcommerce/pull/2119) [`6adb2e7`](https://github.com/graphcommerce-org/graphcommerce/commit/6adb2e72ece8210757ced178779dfba11b1bcf55) - Clarify texts by adding formatting and correcting spelling.
+  ([@carlocarels90](https://github.com/carlocarels90))
+
+- [#2104](https://github.com/graphcommerce-org/graphcommerce/pull/2104) [`d0f1f5a`](https://github.com/graphcommerce-org/graphcommerce/commit/d0f1f5a2d1380d1c3931e23218924d5e8b1fc60d) - Document workaround/patch for broken cart error handling with Magento 2.4.6.
+  ([@hnsr](https://github.com/hnsr))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+### Patch Changes
+
+- [#2172](https://github.com/graphcommerce-org/graphcommerce/pull/2172) [`279599e`](https://github.com/graphcommerce-org/graphcommerce/commit/279599e7a86bd96ea9e36065af3c367df9e02a63) - Updated documentation to reflect recent code changes
+  ([@paales](https://github.com/paales))
+
+## 8.0.0-canary.90
+
+## 8.0.0-canary.89
+
+### Patch Changes
+
+- [`b850ab0`](https://github.com/graphcommerce-org/graphcommerce/commit/b850ab06e3fff1cd274651d8082557ed2c308f55) - Updated roadmap and feature-list
+  ([@paales](https://github.com/paales))
+
+## 8.0.0-canary.88
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+## 8.0.0-canary.70
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+### Patch Changes
+
+- [#2119](https://github.com/graphcommerce-org/graphcommerce/pull/2119) [`6adb2e72e`](https://github.com/graphcommerce-org/graphcommerce/commit/6adb2e72ece8210757ced178779dfba11b1bcf55) - Clarify texts by adding formatting and correcting spelling. ([@carlocarels90](https://github.com/carlocarels90))
+
+## 7.1.0-canary.52
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+## 7.1.0-canary.38
+
+## 7.1.0-canary.37
+
+### Patch Changes
+
+- [#2112](https://github.com/graphcommerce-org/graphcommerce/pull/2112) [`15a203737`](https://github.com/graphcommerce-org/graphcommerce/commit/15a2037372cd615602d3e2f3deedba9766fc172c) - Make the "Search" string translatable and fix typo. ([@carlocarels90](https://github.com/carlocarels90))
+
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+### Minor Changes
+
+- [#2106](https://github.com/graphcommerce-org/graphcommerce/pull/2106) [`9f8c3cac2`](https://github.com/graphcommerce-org/graphcommerce/commit/9f8c3cac214006315055f37cf8d4a783eb99a7ec) - Split off Magento known issues to separate page ([@hnsr](https://github.com/hnsr))
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+### Patch Changes
+
+- [#2104](https://github.com/graphcommerce-org/graphcommerce/pull/2104) [`d0f1f5a2d`](https://github.com/graphcommerce-org/graphcommerce/commit/d0f1f5a2d1380d1c3931e23218924d5e8b1fc60d) - Document workaround/patch for broken cart error handling with Magento 2.4.6. ([@hnsr](https://github.com/hnsr))
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
 ## 7.1.0-canary.23
 
 ## 7.1.0-canary.22
@@ -853,31 +1065,31 @@
   All occurences of `<Trans>` and `t` need to be replaced:
 
   ```tsx
-  import { Trans, t } from '@lingui/macro'
+  import { Trans, t } from "@lingui/macro";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={t`Account ${foo}`}>
         <Trans>My Translation {foo}</Trans>
       </div>
-    )
+    );
   }
   ```
 
   Needs to be replaced with:
 
   ```tsx
-  import { Trans } from '@lingui/react'
-  import { i18n } from '@lingui/core'
+  import { Trans } from "@lingui/react";
+  import { i18n } from "@lingui/core";
 
   function MyComponent() {
-    const foo = 'bar'
+    const foo = "bar";
     return (
       <div aria-label={i18n._(/* i18n */ `Account {foo}`, { foo })}>
-        <Trans key='My Translation {foo}' values={{ foo }}></Trans>
+        <Trans key="My Translation {foo}" values={{ foo }}></Trans>
       </div>
-    )
+    );
   }
   ```
 

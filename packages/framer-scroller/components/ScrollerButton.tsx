@@ -29,7 +29,11 @@ export const ScrollerButton = m(
 
     const { getSnapPosition, scroll } = useScrollerContext()
     const scrollTo = useScrollTo()
-    const handleClick = () => scrollTo(getSnapPosition(direction))
+    const handleClick = async () => {
+      if (!scroll.animating.get()) {
+        await scrollTo(getSnapPosition(direction))
+      }
+    }
 
     const { xProgress, yProgress, xMax, yMax } = scroll
 
@@ -74,10 +78,7 @@ export const ScrollerButton = m(
           {...buttonProps}
           onClick={handleClick}
           aria-label={direction}
-          sx={[
-            { transition: 'all 250ms', zIndex: 'inherit', ...mode },
-            ...(Array.isArray(sx) ? sx : [sx]),
-          ]}
+          sx={[{ transition: 'all 250ms', ...mode }, ...(Array.isArray(sx) ? sx : [sx])]}
         />
       </MotionDiv>
     )

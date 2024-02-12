@@ -1,5 +1,172 @@
 # @graphcommerce/hygraph-cli
 
+## 8.0.1-canary.4
+
+## 8.0.1-canary.3
+
+## 8.0.1-canary.2
+
+## 8.0.1-canary.1
+
+## 8.0.1-canary.0
+
+## 8.0.0
+
+### Patch Changes
+
+- [#2095](https://github.com/graphcommerce-org/graphcommerce/pull/2095) [`519531e`](https://github.com/graphcommerce-org/graphcommerce/commit/519531eb48bf6c5b68703509d2bd64c8dfe5b92c) - Fix Hygraph CLI (Management SDK) | Add support for updating and deleting enumerations
+  ([@JoshuaS98](https://github.com/JoshuaS98))
+
+- [#2169](https://github.com/graphcommerce-org/graphcommerce/pull/2169) [`eab3f0b`](https://github.com/graphcommerce-org/graphcommerce/commit/eab3f0b0b459f5b6cc4e50d787ac1e8ae545b708) - Solve issue where a Hygraph DynamicRow conditions were missing fields in the OrCondition
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.100
+
+## 8.0.0-canary.99
+
+## 8.0.0-canary.98
+
+## 8.0.0-canary.97
+
+## 8.0.0-canary.96
+
+## 8.0.0-canary.95
+
+## 8.0.0-canary.94
+
+### Patch Changes
+
+- [#2169](https://github.com/graphcommerce-org/graphcommerce/pull/2169) [`eab3f0b`](https://github.com/graphcommerce-org/graphcommerce/commit/eab3f0b0b459f5b6cc4e50d787ac1e8ae545b708) - Solve issue where a Hygraph DynamicRow conditions were missing fields in the OrCondition
+  ([@Jessevdpoel](https://github.com/Jessevdpoel))
+
+## 8.0.0-canary.93
+
+## 8.0.0-canary.92
+
+## 8.0.0-canary.91
+
+## 8.0.0-canary.90
+
+## 8.0.0-canary.89
+
+## 8.0.0-canary.88
+
+## 8.0.0-canary.87
+
+## 8.0.0-canary.86
+
+## 8.0.0-canary.85
+
+## 8.0.0-canary.84
+
+## 8.0.0-canary.83
+
+## 8.0.0-canary.82
+
+## 8.0.0-canary.81
+
+## 8.0.0-canary.80
+
+## 8.0.0-canary.79
+
+## 8.0.0-canary.78
+
+## 8.0.0-canary.77
+
+## 8.0.0-canary.76
+
+## 8.0.0-canary.75
+
+## 8.0.0-canary.74
+
+## 8.0.0-canary.73
+
+## 8.0.0-canary.72
+
+## 8.0.0-canary.71
+
+## 8.0.0-canary.70
+
+## 8.0.0-canary.69
+
+## 7.1.0-canary.68
+
+## 7.1.0-canary.67
+
+## 7.1.0-canary.66
+
+## 7.1.0-canary.65
+
+## 7.1.0-canary.64
+
+## 7.1.0-canary.63
+
+## 7.1.0-canary.62
+
+## 7.1.0-canary.61
+
+## 7.1.0-canary.60
+
+## 7.1.0-canary.59
+
+## 7.1.0-canary.58
+
+## 7.1.0-canary.57
+
+## 7.1.0-canary.56
+
+## 7.1.0-canary.55
+
+## 7.1.0-canary.54
+
+## 7.1.0-canary.53
+
+## 7.1.0-canary.52
+
+## 7.1.0-canary.51
+
+## 7.1.0-canary.50
+
+## 7.1.0-canary.49
+
+## 7.1.0-canary.48
+
+## 7.1.0-canary.47
+
+## 7.1.0-canary.46
+
+## 7.1.0-canary.45
+
+## 7.1.0-canary.38
+
+## 7.1.0-canary.37
+
+## 7.1.0-canary.36
+
+## 7.1.0-canary.35
+
+## 7.1.0-canary.34
+
+## 7.1.0-canary.33
+
+## 7.1.0-canary.32
+
+## 7.1.0-canary.31
+
+## 7.1.0-canary.30
+
+## 7.1.0-canary.29
+
+## 7.1.0-canary.28
+
+## 7.1.0-canary.27
+
+## 7.1.0-canary.26
+
+## 7.1.0-canary.25
+
+## 7.1.0-canary.24
+
 ## 7.1.0-canary.23
 
 ## 7.1.0-canary.22

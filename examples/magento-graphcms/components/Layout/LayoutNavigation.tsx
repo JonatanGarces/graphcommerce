@@ -21,11 +21,13 @@ import {
   NavigationOverlay,
   useNavigationSelection,
   useMemoDeep,
+  LazyHydrate,
 } from '@graphcommerce/next-ui'
 import { i18n } from '@lingui/core'
 import { Trans } from '@lingui/react'
 import { Divider, Fab } from '@mui/material'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 import { Footer } from './Footer'
 import { LayoutQuery } from './Layout.gql'
 import { Logo } from './Logo'
@@ -86,7 +88,11 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
             >
               <Trans id='Customer Service' />
             </MenuFabSecondaryItem>,
-            <WishlistMenuFabItem key='wishlist' icon={<IconSvg src={iconHeart} size='medium' />}>
+            <WishlistMenuFabItem
+              onClick={() => selection.set(false)}
+              key='wishlist'
+              icon={<IconSvg src={iconHeart} size='medium' />}
+            >
               <Trans id='Wishlist' />
             </WishlistMenuFabItem>,
             <DarkLightModeMenuSecondaryItem key='darkmode' />,
@@ -122,7 +128,15 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
                 </DesktopNavItem>
               ))}
 
-              <DesktopNavItem onClick={() => selection.set([menu?.items?.[0]?.uid || ''])}>
+              <DesktopNavItem
+                onClick={() => selection.set([menu?.items?.[0]?.uid || ''])}
+                onKeyUp={(evt) => {
+                  if (evt.key === 'Enter') {
+                    selection.set([menu?.items?.[0]?.uid || ''])
+                  }
+                }}
+                tabIndex={0}
+              >
                 {menu?.items?.[0]?.name}
                 <IconSvg src={iconChevronDown} />
               </DesktopNavItem>
@@ -142,7 +156,7 @@ export function LayoutNavigation(props: LayoutNavigationProps) {
               )}
               <Fab
                 href='/service'
-                aria-label={i18n._(/* i18n */ 'Account')}
+                aria-label={i18n._(/* i18n */ 'Customer Service')}
                 size='large'
                 color='inherit'
               >
