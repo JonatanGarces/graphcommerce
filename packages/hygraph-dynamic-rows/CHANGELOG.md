@@ -1,5 +1,17 @@
 # @graphcommerce/hygraph-dynamic-rows
 
+## 8.0.2
+
+## 8.0.2-canary.3
+
+## 8.0.2-canary.2
+
+## 8.0.2-canary.1
+
+## 8.0.2-canary.0
+
+## 8.0.1
+
 ## 8.0.1-canary.4
 
 ## 8.0.1-canary.3

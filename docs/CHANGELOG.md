@@ -1,5 +1,43 @@
 # Change Log
 
+## 8.0.2
+
+### Patch Changes
+
+- [#2195](https://github.com/graphcommerce-org/graphcommerce/pull/2195) [`207cd41`](https://github.com/graphcommerce-org/graphcommerce/commit/207cd4147621e53353b0b354c80d575df78089f0) - Documentation on multistore setup added
+  ([@paales](https://github.com/paales))
+
+- [#2193](https://github.com/graphcommerce-org/graphcommerce/pull/2193) [`317250a`](https://github.com/graphcommerce-org/graphcommerce/commit/317250a580b9f0b5175d9df93ba2cf62193ea383) - Updated docs to reflect featurelist more accurately
+  ([@paales](https://github.com/paales))
+
+## 8.0.2-canary.3
+
+## 8.0.2-canary.2
+
+## 8.0.2-canary.1
+
+### Patch Changes
+
+- [#2193](https://github.com/graphcommerce-org/graphcommerce/pull/2193) [`317250a`](https://github.com/graphcommerce-org/graphcommerce/commit/317250a580b9f0b5175d9df93ba2cf62193ea383) - Updated docs to reflect featurelist more accurately
+  ([@paales](https://github.com/paales))
+
+## 8.0.2-canary.0
+
+### Patch Changes
+
+- [#2195](https://github.com/graphcommerce-org/graphcommerce/pull/2195) [`207cd41`](https://github.com/graphcommerce-org/graphcommerce/commit/207cd4147621e53353b0b354c80d575df78089f0) - Documentation on multistore setup added
+  ([@paales](https://github.com/paales))
+
+## 8.0.1
+
+### Patch Changes
+
+- [#2186](https://github.com/graphcommerce-org/graphcommerce/pull/2186) [`09eb25c`](https://github.com/graphcommerce-org/graphcommerce/commit/09eb25c9892bf4cf57519024e31c2ae4cf2f7a0b) - Update Magento known issues
+  ([@hnsr](https://github.com/hnsr))
+
+- [#2187](https://github.com/graphcommerce-org/graphcommerce/pull/2187) [`6c4cee8`](https://github.com/graphcommerce-org/graphcommerce/commit/6c4cee8469ee4934281bda53ac96aeb5af2f9479) - Make sure the config page can be properly rendered in the docs
+  ([@paales](https://github.com/paales))
+
 ## 8.0.1-canary.4
 
 ## 8.0.1-canary.3
