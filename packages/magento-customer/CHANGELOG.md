@@ -1,5 +1,25 @@
 # Change Log
 
+## 8.0.3-canary.4
+
+## 8.0.3-canary.3
+
+## 8.0.3-canary.2
+
+### Patch Changes
+
+- [#2205](https://github.com/graphcommerce-org/graphcommerce/pull/2205) [`3fbf3da`](https://github.com/graphcommerce-org/graphcommerce/commit/3fbf3da8a67f2fbaa7fa974a37cbbf34613844e4) - Solve an issue where the user would be presented with the Session expired dialog when the user would be logging in during the checkout process.
+  ([@paales](https://github.com/paales))
+
+## 8.0.3-canary.1
+
+### Patch Changes
+
+- [#2207](https://github.com/graphcommerce-org/graphcommerce/pull/2207) [`4d7594c`](https://github.com/graphcommerce-org/graphcommerce/commit/4d7594ca2174f74bfa9f66a464b77b3fd04f3560) - After changing the default shipping or billing address in the account section other address would not properly update
+  ([@paales](https://github.com/paales))
+
+## 8.0.3-canary.0
+
 ## 8.0.2
 
 ### Patch Changes

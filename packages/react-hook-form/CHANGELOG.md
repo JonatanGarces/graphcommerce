@@ -1,5 +1,20 @@
 # Change Log
 
+## 8.0.3-canary.4
+
+## 8.0.3-canary.3
+
+### Patch Changes
+
+- [#2206](https://github.com/graphcommerce-org/graphcommerce/pull/2206) [`855ab09`](https://github.com/graphcommerce-org/graphcommerce/commit/855ab097b9ea204a7c73c6550b7a5e9e2290f378) - Cleanup `<FormAutoSubmit/>` and remove internal hook.
+  ([@paales](https://github.com/paales))
+
+## 8.0.3-canary.2
+
+## 8.0.3-canary.1
+
+## 8.0.3-canary.0
+
 ## 8.0.2
 
 ## 8.0.2-canary.3

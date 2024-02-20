@@ -77,5 +77,16 @@
     "@graphcommerce/prettier-config-pwa": "8.0.2",
     "@graphcommerce/typescript-config-pwa": "8.0.2"
   },
-  "changesets": []
+  "changesets": [
+    "afraid-toys-matter",
+    "eight-beans-joke",
+    "eight-flowers-heal",
+    "late-cats-jump",
+    "mighty-humans-listen",
+    "nice-bugs-push",
+    "pink-radios-breathe",
+    "pink-steaks-switch",
+    "quick-vans-sniff",
+    "three-carrots-poke"
+  ]
 }
